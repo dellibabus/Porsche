@@ -44,12 +44,12 @@ const Models = () => {
     return (
         <div className="max-w-6xl mx-auto p-6" id='models'>
             <div className="text-center mb-12">
-                <h1 className="text-5xl font-bold text-gray-800">Our Models</h1>
+                <h1 className="text-5xl font-bold text-white">Our Models</h1>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8">
                 {models.map((items, index) => (
-                    <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div key={index} className="bg-gray-300 rounded-lg shadow-lg overflow-hidden">
                         <img src={items.image} alt={items.name} className="w-full h-64 object-cover hover:scale-105 transition duration-300 ease-in-out transform"/>
                         <div className="p-6">
                             <h2 className="text-2xl font-semibold text-gray-800 mb-2">{items.name}</h2>

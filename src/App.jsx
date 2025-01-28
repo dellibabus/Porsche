@@ -10,13 +10,16 @@ import Footer from "./Components/Footer";
 const App = () => {
     return (
         <>
-            <Navbar />
-            <Home />
-            <About />
-            <Models />
-            <CenterPorsche />
-            <Discover />
-            <Footer />
+            <div className="bg-gradient-to-l from-gray-900 to-gray-700">
+                <Navbar />
+                <Home />
+                <About />
+                <Models />
+                <CenterPorsche />
+                <Discover />
+                <Footer />
+            </div>
+
         </>
     );
 };
