@@ -1,5 +1,5 @@
 import React from 'react';
-import Porsche from "../assets/aboutimg.png";
+import Porsche from "../assets/Aboutimg.png";
 
 const About = () => {
     return (
