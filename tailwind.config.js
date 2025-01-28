@@ -7,6 +7,8 @@ export default {
         porsche: ["Orbitron", "sans-serif"],
       },
     },
+    
   },
+  
   plugins: [],
 };

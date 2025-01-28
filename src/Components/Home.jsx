@@ -3,7 +3,7 @@ import CarImage from "../assets/Heroimage.png";
 
 const Home = () => {
     return (
-        <div className="w-full min-h-screen bg-white text-gray-800 flex flex-col-reverse md:flex-row items-center px-6 md:px-16 lg:px-24 py-12" id="/">
+        <div className="w-full min-h-screen bg-white text-gray-800 flex flex-col-reverse md:flex-row items-center px-6 md:px-16 lg:px-24 py-12" id="home">
 
             <div className="w-full md:w-1/2 text-center md:text-left space-y-6">
                 <h1 className="text-4xl lg:text-5xl font-bold leading-tight">
