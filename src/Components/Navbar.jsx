@@ -13,10 +13,10 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="w-full h-16 bg-gradient-to-l from-gray-900 to-gray-700 text-white flex items-center justify-between px-6 shadow-lg fixed top-0 z-50 transition-all duration-300">
+    <nav className="w-full h-16 bg-white text-gray-900 flex items-center justify-between px-6 md:px-10 shadow-lg fixed top-0 z-50 transition-all duration-300">
       {/* Logo */}
-      <div className="text-2xl font-porsche">
-        <h1 className="font-bold cursor-pointer">PORSCHE</h1>
+      <div className="text-2xl font-bold text-gray-900 cursor-pointer">
+        PORSCHE
       </div>
 
       {/* Desktop Navigation */}
@@ -27,10 +27,9 @@ const Navbar = () => {
               to={item.path}
               smooth={true}
               duration={500}
-              className="text-white hover:text-blue-400 font-medium transition duration-300"
-              activeClass="text-blue-600 font-bold"
+              className="text-gray-900 hover:text-gray-500 font-medium transition duration-300"
+              activeClass="text-gray-900 font-bold"
               spy={true}
-              onClick={() => setIsOpen(false)}
             >
               {item.name}
             </Link>
@@ -39,41 +38,43 @@ const Navbar = () => {
       </ul>
 
       {/* Login Button */}
-      <div className="hidden md:flex items-center gap-4">
-        <button className="bg-transparent to-green-500 text-white px-4 py-1 rounded-lg shadow-md hover:shadow-lg hover:opacity-90 transition duration-300">
+      <div className="hidden md:flex items-center">
+        <button className="px-5 py-2 rounded-lg bg-none text-gray-900 font-medium hover:bg-gray-200 transition duration-300">
           Login
         </button>
       </div>
 
       {/* Mobile Menu Icon */}
       <div className="md:hidden">
-        <button onClick={() => setIsOpen(!isOpen)} className="text-white">
+        <button onClick={() => setIsOpen(!isOpen)} className="text-gray-900">
           {isOpen ? <FiX size={28} /> : <FiMenu size={28} />}
         </button>
       </div>
 
       {/* Mobile Navigation */}
-      {isOpen && (
-        <div className="absolute top-16 left-0 w-full bg-gradient-to-b from-gray-900 to-gray-800 text-white shadow-lg flex flex-col items-center space-y-6 py-4 transition-all duration-300 md:hidden">
-          {NavList.map((item, index) => (
-            <Link
-              key={index}
-              to={item.path}
-              smooth={true}
-              duration={500}
-              className="text-white hover:text-blue-400 font-medium transition duration-300"
-              activeClass="text-blue-600 font-bold"
-              spy={true}
-              onClick={() => setIsOpen(false)}
-            >
-              {item.name}
-            </Link>
-          ))}
-          <button className="bg-transparent text-white px-6 py-2 rounded-lg shadow-md hover:shadow-lg hover:opacity-90 transition duration-300">
-            Login
-          </button>
-        </div>
-      )}
+      <div
+        className={`absolute top-0 left-0 h-screen w-64 bg-white shadow-2xl transform ${
+          isOpen ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"
+        } transition-transform duration-500 ease-in-out flex flex-col items-center pt-20 space-y-6 md:hidden`}
+      >
+        {NavList.map((item, index) => (
+          <Link
+            key={index}
+            to={item.path}
+            smooth={true}
+            duration={500}
+            className="text-gray-900 hover:text-gray-500 font-medium transition duration-300"
+            activeClass="text-[#6366f1] font-bold"
+            spy={true}
+            onClick={() => setIsOpen(false)}
+          >
+            {item.name}
+          </Link>
+        ))}
+        <button className="px-6 py-2 rounded-lg bg-gray-300 text-gray-900 font-medium hover:bg-gray-200 transition duration-300">
+          Login
+        </button>
+      </div>
     </nav>
   );
 };

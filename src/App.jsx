@@ -8,20 +8,17 @@ import Discover from "./Components/Discover";
 import Footer from "./Components/Footer";
 
 const App = () => {
-    return (
-        <>
-            <div className="bg-gradient-to-l from-gray-900 to-gray-700">
-                <Navbar />
-                <Home />
-                <About />
-                <Models />
-                <CenterPorsche />
-                <Discover />
-                <Footer />
-            </div>
-
-        </>
-    );
+  return (
+    <>
+      <Navbar />
+      <Home />
+      <About />
+      <Models />
+      <CenterPorsche />
+      <Discover />
+      <Footer />
+    </>
+  );
 };
 
 export default App;

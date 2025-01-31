@@ -3,28 +3,28 @@ import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaYoutube } from 'react
 
 const Footer = () => {
   return (
-    <div className="bg-gradient-to-l from-gray-900 to-gray-700 text-white py-12 mt-10">
+    <div className="bg-white py-12 mt-10">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
         {/* Brand Information Section */}
         <div className="space-y-4 font-bold">
-          <h2 className="text-3xl font-porsche text-white">Porsche</h2>
-          <p className="text-gray-200">
+          <h2 className="text-3xl font-porsche text-gray-900">Porsche</h2>
+          <p className="text-gray-700">
             Drive into the future with Porsche’s legendary performance and luxury. Our commitment to precision and innovation is embodied in every vehicle.
           </p>
           <div className="flex space-x-6 mt-4">
-            <a href="#" className="text-gray-200 hover:text-gray-400 transition duration-300">
+            <a href="#" className="text-gray-700 hover:text-gray-600 transition duration-300">
               <FaFacebook size={30} />
             </a>
-            <a href="#" className="text-gray-200 hover:text-gray-400 transition duration-300">
+            <a href="#" className="text-gray-700 hover:text-gray-600 transition duration-300">
               <FaTwitter size={30} />
             </a>
-            <a href="#" className="text-gray-200 hover:text-gray-400 transition duration-300">
+            <a href="#" className="text-gray-700 hover:text-gray-600 transition duration-300">
               <FaInstagram size={30} />
             </a>
-            <a href="#" className="text-gray-200 hover:text-gray-400 transition duration-300">
+            <a href="#" className="text-gray-700 hover:text-gray-600 transition duration-300">
               <FaLinkedin size={30} />
             </a>
-            <a href="#" className="text-gray-200 hover:text-gray-400 transition duration-300">
+            <a href="#" className="text-gray-700 hover:text-gray-600 transition duration-300">
               <FaYoutube size={30} />
             </a>
           </div>
@@ -35,16 +35,16 @@ const Footer = () => {
           <h3 className="text-xl font-semibold">Quick Links</h3>
           <ul className="space-y-2">
             <li>
-              <a href="#" className="text-gray-200 hover:text-gray-400 transition duration-300">Home</a>
+              <a href="#" className="text-gray-700 hover:text-gray-600 transition duration-300">Home</a>
             </li>
             <li>
-              <a href="#" className="text-gray-200 hover:text-gray-400 transition duration-300">About</a>
+              <a href="#" className="text-gray-700 hover:text-gray-600 transition duration-300">About</a>
             </li>
             <li>
-              <a href="#" className="text-gray-200 hover:text-gray-400 transition duration-300">Models</a>
+              <a href="#" className="text-gray-700 hover:text-gray-600 transition duration-300">Models</a>
             </li>
             <li>
-              <a href="#" className="text-gray-200 hover:text-gray-400 transition duration-300">Discover</a>
+              <a href="#" className="text-gray-700 hover:text-gray-600 transition duration-300">Discover</a>
             </li>
           </ul>
         </div>
@@ -54,16 +54,16 @@ const Footer = () => {
           <h3 className="text-xl font-semibold">Support</h3>
           <ul className="space-y-2">
             <li>
-              <a href="#" className="text-gray-200 hover:text-gray-400 transition duration-300">FAQ</a>
+              <a href="#" className="text-gray-700 hover:text-gray-600 transition duration-300">FAQ</a>
             </li>
             <li>
-              <a href="#" className="text-gray-200 hover:text-gray-400 transition duration-300">Warranty</a>
+              <a href="#" className="text-gray-700 hover:text-gray-600 transition duration-300">Warranty</a>
             </li>
             <li>
-              <a href="#" className="text-gray-200 hover:text-gray-400 transition duration-300">Service Center</a>
+              <a href="#" className="text-gray-700 hover:text-gray-600 transition duration-300">Service Center</a>
             </li>
             <li>
-              <a href="#" className="text-gray-200 hover:text-gray-400 transition duration-300">Track Your Order</a>
+              <a href="#" className="text-gray-700 hover:text-gray-600 transition duration-300">Track Your Order</a>
             </li>
           </ul>
         </div>
@@ -71,7 +71,7 @@ const Footer = () => {
 
       {/* Footer Bottom Section */}
       <div className="mt-12 border-t border-gray-700 pt-6 text-center">
-        <p className="text-sm text-gray-200">© 2025 Porsche. All rights reserved.</p>
+        <p className="text-sm text-gray-700">© 2025 Porsche. All rights reserved.</p>
       </div>
     </div>
   );
