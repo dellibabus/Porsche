@@ -14,8 +14,8 @@ const Navbar = () => {
 
   return (
     <nav className="w-full h-16 bg-white text-gray-900 flex items-center justify-between px-6 md:px-10 shadow-lg fixed top-0 z-50 transition-all duration-300">
-      {/* Logo */}
-      <div className="text-2xl font-bold text-gray-900 cursor-pointer">
+      {/* Logo - Always Visible */}
+      <div className="text-2xl font-bold text-gray-900 cursor-pointer z-50">
         PORSCHE
       </div>
 
@@ -27,8 +27,8 @@ const Navbar = () => {
               to={item.path}
               smooth={true}
               duration={500}
-              className="text-gray-900 hover:text-gray-500 font-medium transition duration-300"
-              activeClass="text-gray-900 font-bold"
+              className="text-gray-900 hover:text-gray-600 font-medium transition duration-300"
+              activeClass="border-b-2 border-gray-900 font-bold"
               spy={true}
             >
               {item.name}
@@ -39,19 +39,19 @@ const Navbar = () => {
 
       {/* Login Button */}
       <div className="hidden md:flex items-center">
-        <button className="px-5 py-2 rounded-lg bg-none text-gray-900 font-medium hover:bg-gray-200 transition duration-300">
+        <button className="px-5 py-2 rounded-lg bg-[#478CCF] text-white font-medium hover:bg-[#36C2CE] transition duration-300 shadow-md">
           Login
         </button>
       </div>
 
       {/* Mobile Menu Icon */}
-      <div className="md:hidden">
+      <div className="md:hidden z-50">
         <button onClick={() => setIsOpen(!isOpen)} className="text-gray-900">
           {isOpen ? <FiX size={28} /> : <FiMenu size={28} />}
         </button>
       </div>
 
-      {/* Mobile Navigation */}
+      {/* Mobile Menu */}
       <div
         className={`absolute top-0 left-0 h-screen w-64 bg-white shadow-2xl transform ${
           isOpen ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"
@@ -63,15 +63,15 @@ const Navbar = () => {
             to={item.path}
             smooth={true}
             duration={500}
-            className="text-gray-900 hover:text-gray-500 font-medium transition duration-300"
-            activeClass="text-[#6366f1] font-bold"
+            className="text-gray-900 hover:text-gray-600 font-medium transition duration-300"
+            activeClass="border-b-2 border-gray-900 font-bold"
             spy={true}
             onClick={() => setIsOpen(false)}
           >
             {item.name}
           </Link>
         ))}
-        <button className="px-6 py-2 rounded-lg bg-gray-300 text-gray-900 font-medium hover:bg-gray-200 transition duration-300">
+        <button className="px-6 py-2 rounded-lg bg-[#478CCF] text-white font-medium hover:bg-[#36C2CE] transition duration-300 shadow-md">
           Login
         </button>
       </div>
